@@ -1,0 +1,36 @@
+.shopping-cart-container {
+  position: fixed;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  background-color: white;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  gap: 80px;
+}
+.shopping-cart-img {
+  width: 100px;
+  height: auto;
+}
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  background-color: unset;
+  border: none;
+}
+.close-btn:hover {
+  cursor: pointer;
+}

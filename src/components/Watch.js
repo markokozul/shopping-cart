@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 export function Watch({ num }) {
   return (
@@ -9,8 +8,8 @@ export function Watch({ num }) {
           <p className='see-more'>See More</p>
         </Link>
       </div>
-      <p>Lorem Ipsum</p>
-      <p>199.99$</p>
+      <p>Lorem Ipsum{num}</p>
+      <p>{num * 100}$</p>
     </div>
   );
 }

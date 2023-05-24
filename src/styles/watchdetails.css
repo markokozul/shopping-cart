@@ -8,3 +8,70 @@
 .watch-details-box-2 {
   flex: 50;
 }
+.watch-details-box-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+  background: -webkit-radial-gradient(
+    bottom,
+    rgb(60, 43, 51) 0%,
+    rgb(43, 31, 36) 50%,
+
+    rgb(22, 17, 22) 100%
+  );
+  background: -o-radial-gradient(
+    bottom,
+    rgb(60, 43, 51) 0%,
+    rgb(22, 17, 22) 100%
+  );
+  background: -ms-radial-gradient(
+    bottom,
+    rgb(60, 43, 51) 0%,
+    rgb(43, 31, 36) 60%,
+    rgb(22, 17, 22) 100%
+  );
+  background: -moz-radial-gradient(
+    bottom,
+    rgb(60, 43, 51) 0%,
+    rgb(22, 17, 22) 100%
+  );
+  background: radial-gradient(
+    at bottom right,
+    rgb(60, 43, 51) 0%,
+    rgb(22, 17, 22) 100%
+  );
+  color: white;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  font-size: 24px;
+}
+.decrement,
+.increment {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: none;
+}
+.decrement:hover,
+.increment:hover {
+  cursor: pointer;
+}
+.add-to-cart-btn {
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  background-color: unset;
+  padding: 10px 20px;
+}
+
+.add-to-cart-btn:hover {
+  cursor: pointer;
+}
