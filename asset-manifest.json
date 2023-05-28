@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.4a7adb1d.css",
+    "main.js": "/shopping-cart/static/js/main.601816e3.js",
+    "static/media/background.jpg": "/shopping-cart/static/media/background.9f687f2b4a74899617bb.jpg",
+    "static/media/watch3.jpg": "/shopping-cart/static/media/watch3.6c02f9842d6398db1561.jpg",
+    "static/media/watch1.jpg": "/shopping-cart/static/media/watch1.6d16588effd96433a515.jpg",
+    "static/media/watch2.jpg": "/shopping-cart/static/media/watch2.5da822f7cda009cdfe9a.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.4a7adb1d.css.map": "/shopping-cart/static/css/main.4a7adb1d.css.map",
+    "main.601816e3.js.map": "/shopping-cart/static/js/main.601816e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a7adb1d.css",
+    "static/js/main.601816e3.js"
+  ]
+}
