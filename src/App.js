@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
+import { Route, Routes, HashRouter, Navigate } from 'react-router-dom';
 import { createContext, useState } from 'react';
 import { Homepage } from './components/Homepage';
 import { Shop } from './components/Shop';
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter>
+      <HashRouter>
         <Context.Provider value={{ setCartNum, cartProducts, setCartProducts }}>
           <Header setSidebar={setSidebar} cartNum={cartNum} />
 
@@ -34,7 +34,7 @@ function App() {
             <Route path='/shop/:id' exact element={<WatchDetails />}></Route>
           </Routes>
         </Context.Provider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

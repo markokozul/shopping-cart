@@ -70,7 +70,7 @@ export function ShoppingCart({
           ) : (
             <>
               <h1>Your cart is empty</h1>
-              <Link to='/shop' onClick={closeSidebar}>
+              <Link className='link-to-shop' to='/shop' onClick={closeSidebar}>
                 Shop Now
               </Link>
             </>
