@@ -11,7 +11,9 @@ export function Header({ setSidebar, cartNum }) {
         <Link to='/shop'>Shop</Link>
         <div className='shopping-cart-icon-container'>
           <i
-            onClick={displaySidebar}
+            onClick={() => {
+              displaySidebar();
+            }}
             className='fa fa-shopping-cart'
             aria-hidden='true'
             style={{ color: 'white' }}
