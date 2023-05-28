@@ -22,8 +22,6 @@ export function ShoppingCart({
       return cartProducts.filter((item) => item.id !== productId);
     });
     setCartNum((prevState) => prevState - 1);
-
-    console.log(cartProducts);
   };
   return (
     <>
