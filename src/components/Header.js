@@ -16,7 +16,11 @@ export function Header({ setSidebar, cartNum }) {
             aria-hidden='true'
             style={{ color: 'white' }}
           ></i>
-          <div className='num-of-items'>{cartNum}</div>
+          {cartNum !== 0 ? (
+            <div className='num-of-items'>{cartNum}</div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

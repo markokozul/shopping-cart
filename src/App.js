@@ -19,14 +19,14 @@ function App() {
       <BrowserRouter>
         <Context.Provider value={{ setCartNum, cartProducts, setCartProducts }}>
           <Header setSidebar={setSidebar} cartNum={cartNum} />
-          {sidebar && (
-            <ShoppingCart
-              setSidebar={setSidebar}
-              cartProducts={cartProducts}
-              setCartProducts={setCartProducts}
-              setCartNum={setCartNum}
-            />
-          )}
+
+          <ShoppingCart
+            sidebar={sidebar}
+            setSidebar={setSidebar}
+            cartProducts={cartProducts}
+            setCartProducts={setCartProducts}
+            setCartNum={setCartNum}
+          />
           <Routes>
             <Route path='/' exact element={<Navigate to='/homepage' />}></Route>
             <Route path='/homepage' exact element={<Homepage />}></Route>

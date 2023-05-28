@@ -1,12 +1,14 @@
 import '../styles/shoppingcart.css';
-
+import { Link } from 'react-router-dom';
 export function ShoppingCart({
+  sidebar,
   setSidebar,
   cartProducts,
   setCartProducts,
   setCartNum,
 }) {
   let total = 0;
+
   const closeSidebar = () => {
     setSidebar(false);
   };
@@ -24,34 +26,56 @@ export function ShoppingCart({
     console.log(cartProducts);
   };
   return (
-    <div className='shopping-cart-container'>
-      <div className='close-btn' onClick={closeSidebar}>
-        <i className='fa fa-times' aria-hidden='true'></i>
-      </div>
-      {cartProducts &&
-        (cartProducts.length > 0 ? (
-          <>
-            {cartProducts.map((item) => (
-              <div key={item.id} className='product-box'>
-                <img
-                  className='shopping-cart-img'
-                  src={require(`../assets/watch${item.id}.jpg`)}
-                  alt=''
-                ></img>
-                <div>
-                  <p>Price: {item.price}</p>
-                  <p>Quantity: {item.quantity}</p>
+    <>
+      <div
+        className={`overlay-div ${sidebar ? 'show-overlay' : ''}`}
+        onClick={closeSidebar}
+      ></div>
+      <div className={`shopping-cart-container ${sidebar ? 'show' : ''}`}>
+        <div className='close-btn' onClick={closeSidebar}>
+          <i className='fa fa-times' aria-hidden='true'></i>
+        </div>
+        {cartProducts &&
+          (cartProducts.length > 0 ? (
+            <>
+              {cartProducts.map((item) => (
+                <div key={item.id} className='product-box'>
+                  <Link to={`/shop/${item.id}`} onClick={closeSidebar}>
+                    <img
+                      className='shopping-cart-img'
+                      src={require(`../assets/watch${item.id}.jpg`)}
+                      alt=''
+                    ></img>
+                  </Link>
+                  <div className='price-quantity'>
+                    <p>
+                      <strong>Price: </strong> {item.price}
+                    </p>
+                    <p>
+                      <strong>Quantity: </strong> {item.quantity}
+                    </p>
+                  </div>
+                  <div
+                    className='remove-btn'
+                    onClick={() => removeFromCart(item.id)}
+                  >
+                    <i className='fa fa-trash' aria-hidden='true'></i>
+                  </div>
+                  {calculateTotal(item.price, item.quantity)}
                 </div>
-                <button onClick={() => removeFromCart(item.id)}>X</button>
-                {calculateTotal(item.price, item.quantity)}
-              </div>
-            ))}
-            <h1>Total: {total}$</h1>
-            <button>Checkout</button>
-          </>
-        ) : (
-          <p>Your cart is empty</p>
-        ))}
-    </div>
+              ))}
+              <h1>Total: {total}$</h1>
+              <button className='checkout-btn'>Checkout</button>
+            </>
+          ) : (
+            <>
+              <h1>Your cart is empty</h1>
+              <Link to='/shop' onClick={closeSidebar}>
+                Shop Now
+              </Link>
+            </>
+          ))}
+      </div>
+    </>
   );
 }

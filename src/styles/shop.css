@@ -33,13 +33,12 @@
 .watches-container {
   width: 80%;
   margin: auto;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 5%;
-  flex-wrap: wrap;
 }
 .watch-box {
   flex: 33.3333333;
@@ -70,4 +69,38 @@ img {
   transform: translate(-50%, -50%);
   color: white;
   display: none;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+img:hover {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 800px) {
+  .watches-container {
+    border: 1px solid violet;
+    width: 80%;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    flex-wrap: nowrap;
+  }
+  img {
+    width: 60%;
+    height: auto;
+  }
+  .shop-container {
+    margin: 0;
+    height: 100%;
+  }
 }

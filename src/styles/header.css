@@ -19,12 +19,24 @@
   text-decoration: none;
   color: white;
 }
+.links a:hover {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
 
 .links i {
   font-size: 24px;
 }
 .links i:hover {
   cursor: pointer;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 .shopping-cart-icon-container {
   width: 60px;
@@ -38,7 +50,8 @@
 .num-of-items {
   width: 23px;
   height: 23px;
-  background-color: white;
+  background-color: rgb(230, 94, 94);
+  color: white;
   border-radius: 45px;
   position: absolute;
   right: 0;
@@ -47,4 +60,15 @@
   align-items: center;
   justify-content: center;
   font-size: 12px;
+}
+
+@media screen and (max-width: 500px) {
+  .header > .links {
+    font-size: 0.9rem;
+
+    gap: 20px;
+  }
+  .home-shop {
+    align-self: flex-start;
+  }
 }

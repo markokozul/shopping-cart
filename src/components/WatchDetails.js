@@ -43,10 +43,10 @@ export function WatchDetails() {
         className='watch-details-box-1'
         style={{
           backgroundImage: `url(${require(`../assets/watch${routeParams.id}.jpg`)})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
         }}
-      ></div>
+      >
+        <div className='filler'></div>
+      </div>
       <div className='watch-details-box-2'>
         <h1>Lorem Ipsum{routeParams.id}</h1>
         <p>
